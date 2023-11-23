@@ -1,19 +1,19 @@
 <template>
-<div>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <PQRS />
-</div>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <PQRS />
+  </div>
 </template>
 
 <script>
-import PQRS from './components/PQRS.vue'
+import PQRS from "./components/PQRS.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    PQRS
-  }
-}
+    PQRS,
+  },
+};
 </script>
 
 <style>

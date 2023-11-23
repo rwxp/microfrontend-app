@@ -4,7 +4,7 @@
     <form @submit.prevent="submitForm">
       <div>
         <label for="email">Correo Electrónico:</label>
-        <input type="email" v-model="pqrs.email" id="email" required>
+        <input type="email" v-model="pqrs.email" id="email" required />
       </div>
       <div>
         <label for="type">Tipo:</label>
@@ -17,7 +17,12 @@
       </div>
       <div>
         <label for="description">Descripción:</label>
-        <textarea v-model="pqrs.description" id="description" rows="4" required></textarea>
+        <textarea
+          v-model="pqrs.description"
+          id="description"
+          rows="4"
+          required
+        ></textarea>
       </div>
       <div>
         <button type="submit">Enviar PQRS</button>
@@ -31,4 +36,3 @@
     </div>
   </div>
 </template>
-
