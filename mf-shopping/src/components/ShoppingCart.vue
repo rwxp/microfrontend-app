@@ -125,6 +125,22 @@ export default {
         cart: false,
         quantity: 1,
       },
+      {
+        id: 4,
+        name: "Cebolla",
+        price: 2000,
+        url: "https://freepngimg.com/thumb/onion/145973-brown-onion-png-image-high-quality.png",
+        cart: false,
+        quantity: 1,
+      },
+      {
+        id: 5,
+        name: "Frijoles",
+        price: 2000,
+        url: "https://www.pngall.com/wp-content/uploads/5/Red-Kidney-Beans-PNG-Image.png",
+        cart: false,
+        quantity: 1,
+      },
     ]);
 
     async function addProduct(product) {
