@@ -1,12 +1,23 @@
 import React from "react";
 import { Component } from "react";
 import "./NavbarStyles.css";
+import { navigateToUrl } from "single-spa";
+
 class Navbar extends Component {
-  state = { clicked: false };
+  state = { clicked: false, activeSection: "home" };
+
+
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
+
+  handleNavigate = (section) => {
+    this.setState({ activeSection: section });
+    navigateToUrl(`/${section}`);
+  };
+
   render() {
+    const { activeSection } = this.state;
     return (
       <>
         <nav>
@@ -48,15 +59,36 @@ class Navbar extends Component {
               className={this.state.clicked ? "#navbar active" : "#navbar"}
             >
               <li>
-                <a className="active" href="index.html">
+                                <a
+                  className={activeSection === "Home" ? "active" : ""}
+                  onClick={() => this.handleNavigate("")}
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="index.html">About</a>
+                <a
+                  className={activeSection === "Shopping" ? "active" : ""}
+                  onClick={() => this.handleNavigate("shopping")}
+                >
+                  Shopping
+                </a>
               </li>
               <li>
-                <a href="index.html">Contact</a>
+                <a
+                  className={activeSection === "Contact" ? "active" : ""}
+                  onClick={() => this.handleNavigate("contact")}
+                >
+                   Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  className={activeSection === "signin" ? "active" : ""}
+                  onClick={() => this.handleNavigate("signin")}
+                >
+                  Sign In
+                </a>
               </li>
             </ul>
           </div>
