@@ -6,7 +6,6 @@ import { navigateToUrl } from "single-spa";
 class Navbar extends Component {
   state = { clicked: false, activeSection: "home" };
 
-
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
@@ -59,8 +58,8 @@ class Navbar extends Component {
               className={this.state.clicked ? "#navbar active" : "#navbar"}
             >
               <li>
-                                <a
-                  className={activeSection === "Home" ? "active" : ""}
+                <a
+                  className={activeSection === "" ? "active" : ""}
                   onClick={() => this.handleNavigate("")}
                 >
                   Home
@@ -68,7 +67,7 @@ class Navbar extends Component {
               </li>
               <li>
                 <a
-                  className={activeSection === "Shopping" ? "active" : ""}
+                  className={activeSection === "shopping" ? "active" : ""}
                   onClick={() => this.handleNavigate("shopping")}
                 >
                   Shopping
@@ -76,10 +75,10 @@ class Navbar extends Component {
               </li>
               <li>
                 <a
-                  className={activeSection === "Contact" ? "active" : ""}
+                  className={activeSection === "contact" ? "active" : ""}
                   onClick={() => this.handleNavigate("contact")}
                 >
-                   Contact
+                  Contact
                 </a>
               </li>
               <li>

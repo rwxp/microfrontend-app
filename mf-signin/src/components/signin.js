@@ -9,7 +9,7 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import bg from "../images/bg.png";
@@ -31,7 +31,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
 
 const defaultTheme = createTheme();
 
