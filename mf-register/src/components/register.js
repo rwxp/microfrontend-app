@@ -15,35 +15,16 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import bg from "../images/bg.png";
 import { navigateToUrl } from "single-spa";
-
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Micro Frontend
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const defaultTheme = createTheme();
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+function register() {
+
+  const [sex, setSex] = useState('');  
+
+  const handleChange = (event) => {
+    setSex(event.target.value);
   };
 
   const handleNavigate = (section) => {
@@ -87,14 +68,39 @@ export default function SignIn() {
               <AccountCircleIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Register
             </Typography>
             <Box
               component="form"
               noValidate
-              onSubmit={handleSubmit}
+
               sx={{ mt: 1 }}
             >
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="firstName"
+                    label="First name"
+                    name="firstName"
+                    autoFocus
+                  />
+                </Grid>
+
+                <Grid item xs={6}>
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="lastName"
+                    label="Last name"
+                    name="lastName"
+                    autoFocus
+                  />
+                </Grid>
+              </Grid>  
               <TextField
                 margin="normal"
                 required
@@ -115,37 +121,35 @@ export default function SignIn() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
+              <FormControl fullWidth >
+                <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+                <Select
+                  sx={{textAlign:'left'}}
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Sex"
+                  value={sex}
+                  onChange={handleChange}
+                >
+                  <MenuItem value={1}>Male</MenuItem>
+                  <MenuItem value={2}>Female</MenuItem>
+                </Select>
+              </FormControl>
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
+                onClick={()=> handleNavigate("shopping")}
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Sign Up
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    <a onClick={() => handleNavigate("register")}>
-                      {"Don't have an account? Sign Up"}
-                    </a>
-                  </Link>
-                </Grid>
-              </Grid>
-              <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
-  );
+  )
 }
+
+export default register
