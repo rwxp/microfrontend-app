@@ -28,9 +28,7 @@ function register() {
   };
 
   const handleNavigate = (section) => {
-    // Prevent default form submission behavior
     event.preventDefault();
-    // Use the navigateToUrl function to redirect to the specified section
     navigateToUrl(`/${section}`);
   };
 
@@ -144,6 +142,13 @@ function register() {
               >
                 Sign Up
               </Button>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    <a onClick={() => handleNavigate("signin")}>
+                      {"have already an account? Sign In"}
+                    </a>
+                  </Link>
+                </Grid>
             </Box>
           </Box>
         </Grid>

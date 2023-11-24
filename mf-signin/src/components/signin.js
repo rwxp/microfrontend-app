@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import bg from "../images/bg.png";
 import { navigateToUrl } from "single-spa";
+import clsx from "clsx";
 
 function Copyright(props) {
   return (
@@ -47,12 +48,10 @@ export default function SignIn() {
   };
 
   const handleNavigate = (section) => {
-    // Prevent default form submission behavior
     event.preventDefault();
-    // Use the navigateToUrl function to redirect to the specified section
     navigateToUrl(`/${section}`);
   };
-
+  
   return (
     <ThemeProvider theme={defaultTheme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -124,6 +123,7 @@ export default function SignIn() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={()=> handleNavigate("shopping")}
               >
                 Sign In
               </Button>
