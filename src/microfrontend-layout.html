@@ -24,10 +24,17 @@
     referrerpolicy="no-referrer"
   />
   <main>
-    <route default>
+    <route path="/">
       <application name="@microfrontend/mf-navbar"></application>
+    </route>
+    <route path="/shopping">
       <application name="@microfrontend/mf-secciones"></application>
       <application name="@microfrontend/mf-shopping"></application>
+    </route>
+    <route path="/signin">
+      <application name="@microfrontend/mf-signin"></application>
+    </route>
+    <route path="/contact">
       <application name="@microfrontend/mf-pqrs"></application>
     </route>
   </main>
