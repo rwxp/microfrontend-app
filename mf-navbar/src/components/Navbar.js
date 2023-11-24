@@ -4,7 +4,7 @@ import "./NavbarStyles.css";
 import { navigateToUrl } from "single-spa";
 
 class Navbar extends Component {
-  state = { clicked: false, activeSection: "home" };
+  state = { clicked: false, activeSection: "" };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
