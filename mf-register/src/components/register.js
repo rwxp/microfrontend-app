@@ -20,8 +20,7 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 const defaultTheme = createTheme();
 
 function register() {
-
-  const [sex, setSex] = useState('');  
+  const [sex, setSex] = useState("");
 
   const handleChange = (event) => {
     setSex(event.target.value);
@@ -68,12 +67,7 @@ function register() {
             <Typography component="h1" variant="h5">
               Register
             </Typography>
-            <Box
-              component="form"
-              noValidate
-
-              sx={{ mt: 1 }}
-            >
+            <Box component="form" noValidate sx={{ mt: 1 }}>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
                   <TextField
@@ -98,7 +92,7 @@ function register() {
                     autoFocus
                   />
                 </Grid>
-              </Grid>  
+              </Grid>
               <TextField
                 margin="normal"
                 required
@@ -119,10 +113,10 @@ function register() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControl fullWidth >
+              <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Sex</InputLabel>
                 <Select
-                  sx={{textAlign:'left'}}
+                  sx={{ textAlign: "left" }}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="Sex"
@@ -137,24 +131,24 @@ function register() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                onClick={()=> handleNavigate("shopping")}
+                onClick={() => handleNavigate("shopping")}
                 sx={{ mt: 3, mb: 2 }}
               >
                 Sign Up
               </Button>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    <a onClick={() => handleNavigate("signin")}>
-                      {"have already an account? Sign In"}
-                    </a>
-                  </Link>
-                </Grid>
+              <Grid item>
+                <Link href="#" variant="body2">
+                  <a onClick={() => handleNavigate("signin")}>
+                    {"have already an account? Sign In"}
+                  </a>
+                </Link>
+              </Grid>
             </Box>
           </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
-  )
+  );
 }
 
-export default register
+export default register;

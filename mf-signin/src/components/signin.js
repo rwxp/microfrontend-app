@@ -51,7 +51,7 @@ export default function SignIn() {
     event.preventDefault();
     navigateToUrl(`/${section}`);
   };
-  
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -123,7 +123,7 @@ export default function SignIn() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={()=> handleNavigate("shopping")}
+                onClick={() => handleNavigate("shopping")}
               >
                 Sign In
               </Button>
