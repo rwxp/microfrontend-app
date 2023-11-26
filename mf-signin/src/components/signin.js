@@ -123,7 +123,7 @@ export default function SignIn() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, bgcolor:'#1b2430', '&:hover': { bgcolor: '#17cf97' } }}
-                onClick={() => handleNavigate("index.html")}
+                onClick={() => handleNavigate("shopping")}
               >
                 Sign In
               </Button>
