@@ -61,8 +61,8 @@ function register() {
               alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              <AccountCircleIcon />
+            <Avatar sx={{ m: 1, bgcolor: "#1b2430" }}>
+              <AccountCircleIcon sx={{bgcolor:'#1b2430'}} />
             </Avatar>
             <Typography component="h1" variant="h5">
               Register
@@ -132,7 +132,7 @@ function register() {
                 fullWidth
                 variant="contained"
                 onClick={() => handleNavigate("shopping")}
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, bgcolor:'#1b2430', '&:hover': { bgcolor: '#17cf97' } }}
               >
                 Sign Up
               </Button>

@@ -23,10 +23,12 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
+  <application name="@microfrontend/mf-navbar"></application>
   <main>
-    <!-- <route path="/">
+    <route default>
       <application name="@microfrontend/mf-landing"></application>
-    </route> -->
+    </route>
     <route path="/signin">
       <application name="@microfrontend/mf-signin"></application>
     </route>
@@ -39,9 +41,6 @@
     </route>
     <route path="/register">
       <application name="@microfrontend/mf-register"></application>
-    </route>
-    <route path="/">
-      <application name="@microfrontend/mf-navbar"></application>
     </route>
   </main>
 </single-spa-router>
