@@ -139,7 +139,7 @@ function register() {
               <Grid item>
                 <Link href="#" variant="body2">
                   <a onClick={() => handleNavigate("signin")}>
-                    {"have already an account? Sign In"}
+                    {"Already have an account? Sign In"}
                   </a>
                 </Link>
               </Grid>
