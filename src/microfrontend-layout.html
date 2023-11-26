@@ -24,21 +24,24 @@
     referrerpolicy="no-referrer"
   />
   <main>
-    <route path="/">
-      <application name="@microfrontend/mf-navbar"></application>
+    <!-- <route path="/">
+      <application name="@microfrontend/mf-landing"></application>
+    </route> -->
+    <route path="/signin">
+      <application name="@microfrontend/mf-signin"></application>
     </route>
     <route path="/shopping">
       <application name="@microfrontend/mf-secciones"></application>
       <application name="@microfrontend/mf-shopping"></application>
-    </route>
-    <route path="/signin">
-      <application name="@microfrontend/mf-signin"></application>
     </route>
     <route path="/contact">
       <application name="@microfrontend/mf-pqrs"></application>
     </route>
     <route path="/register">
       <application name="@microfrontend/mf-register"></application>
+    </route>
+    <route path="/">
+      <application name="@microfrontend/mf-navbar"></application>
     </route>
   </main>
 </single-spa-router>

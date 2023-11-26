@@ -1,7 +1,7 @@
 {
-  "name": "@mf-navbar/mf-navbar",
+  "name": "@mf-landing/mf-landing",
   "scripts": {
-    "start": "webpack serve --port 8080",
+    "start": "webpack serve --port 8090",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
@@ -11,16 +11,17 @@
     "check-format": "prettier --check .",
     "test": "cross-env BABEL_ENV=test jest",
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
+    "prepare": "husky install",
     "coverage": "cross-env BABEL_ENV=test jest --coverage"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.3",
+    "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.23.3",
-    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
     "@babel/runtime": "^7.15.3",
-    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "babel-jest": "^27.0.6",
     "concurrently": "^6.2.1",
@@ -29,6 +30,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "jest-cli": "^27.0.6",
@@ -45,11 +47,5 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.12.0",
     "single-spa-react": "^4.3.1"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|scss)$": "identity-obj-proxy"
-    },
-    "testEnvironment": "jsdom"
   }
 }
